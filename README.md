@@ -32,7 +32,6 @@ The project is organized into two main folders:
 - **Frontend:** Contains components, pages, and assets for the React application.
 - **Backend:** Contains API routes, database connection files, and Cloudinary integration for image uploads.
 
-cat << 'EOF' > SETUP.md
 # Project Setup Instructions
 
 This guide covers how to set up both the backend and frontend of the project in one file.
@@ -61,7 +60,7 @@ This guide covers how to set up both the backend and frontend of the project in 
 
     
      npm install 
-  cat << 'EOF' > FRONTEND_SETUP_AND_APIS.md
+  
 # Frontend Setup and API Documentation
 
 ## Frontend Setup Instructions
@@ -82,54 +81,96 @@ This guide covers how to set up both the backend and frontend of the project in 
   
 
 
+cat << 'EOF' > API_AND_GIT.md
 # API Endpoints Documentation
 
-Below are the available API endpoints with brief descriptions. Use these endpoints to interact with the backend services of the project.
+Below are the available API endpoints with brief descriptions:
 
-```http
- User Authentication Endpoints
+------------------------------------------------------------
+# User Authentication Endpoints
 
-# Signup - Create a new user account.
+Signup - Create a new user account.
 POST http://localhost:5001/api/user/auth/signup
 
-# Login - Log in using your credentials.
+Login - Log in using your credentials.
 POST http://localhost:5001/api/user/auth/login
 
-# Logout - Logs out the current user.
+Logout - Logs out the current user.
 POST http://localhost:5001/api/user/auth/logout
 
-# Check Authentication - Verifies if the user is authenticated.
+Check Authentication - Verifies if the user is authenticated.
 GET http://localhost:5001/api/user/auth/checkAuth
 
-
+------------------------------------------------------------
 # Blog Management Endpoints (User)
 
-# Add Blog - Create a new blog post.
+Add Blog - Create a new blog post.
 POST http://localhost:5001/api/user/blog/add
 
-# Delete Blog - Deletes a specific blog post (example: id 4).
-DELETE http://localhost:5001/api/user/blog/delete/4
+Delete Blog - Deletes a specific blog post (example: id 4).
+DELETE http://localhost:5001/api/user/blog/delete/:id
 
-# Get My Posts - Retrieves all blog posts created by the logged-in user.
+Get My Posts - Retrieves all blog posts created by the logged-in user.
 GET http://localhost:5001/api/user/blog/my-posts
 
-# Get Specific My Post - Retrieves a specific blog post (example: id 13) for the logged-in user.
-GET http://localhost:5001/api/user/blog/my-posts/13
+Get Specific My Post - Retrieves a specific blog post (example: id 13) for the logged-in user.
+GET http://localhost:5001/api/user/blog/my-posts/:id
 
-# Filter Blogs - Filters user's blog posts based on query parameters.
+Filter Blogs - Filters user's blog posts based on query parameters.
 GET http://localhost:5001/api/user/blog/filter
 
-
+------------------------------------------------------------
 # Blog Management Endpoints (Home)
 
-# Get Home Posts - Retrieves all blog posts for the home page.
+Get Home Posts - Retrieves all blog posts for the home page.
 GET http://localhost:5001/api/home/posts
 
-# Get Specific Home Post - Retrieves a specific blog post on the home page (example: id 1).
-GET http://localhost:5001/api/home/posts/1
+Get Specific Home Post - Retrieves a specific blog post on the home page (example: id 1).
+GET http://localhost:5001/api/home/posts/:id
 
-# Filter Home Posts - Filters home posts based on category and title.
+Filter Home Posts - Filters home posts based on category and title.
 GET http://localhost:5001/api/home/filter?category=exams&title=mid
+
+------------------------------------------------------------
+
+# Git Commands Documentation
+
+Below are some common Git commands for managing your repository:
+
+Initialize a new Git repository:
+git init
+
+Clone an existing repository:
+git clone <repository-url>
+
+Check the status of your repository:
+git status
+
+Stage changes for commit:
+git add .
+
+Commit your staged changes:
+git commit -m "Your commit message"
+
+View commit history:
+git log
+
+Push your commits to the remote repository:
+git push origin main
+
+Force push (use with caution):
+git push --force origin main
+
+Create a new branch:
+git branch <branch-name>
+
+Switch to a branch:
+git checkout <branch-name>
+
+Merge a branch into the current branch:
+git merge <branch-name>
+
+
 
 
   
